@@ -1,0 +1,17 @@
+{
+  "name": "currency-in-wordsinr",
+  "version": "1.0.1",
+  "description": "Convert Input Amount to Words based on the Indian Rupee Format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Currency",
+    "to",
+    "Words",
+    "INR"
+  ],
+  "author": "Adharsh RJ",
+  "license": "ISC"
+}
