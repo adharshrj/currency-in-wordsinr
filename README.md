@@ -33,12 +33,6 @@ Once the package is installed, you can import the library using `import` or `req
 
 ```js
 import { price_in_rupees } from 'currency-in-wordsinr';
-```
-
-You can also use the default export, since the named export is just a re-export from the Axios factory:
-
-```js
-import { price_in_rupees } from 'currency-in-wordsinr';
 
 console.log(price_in_rupees('25000'));
 ````
