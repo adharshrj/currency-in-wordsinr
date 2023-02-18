@@ -1,4 +1,4 @@
-function price_in_words(price) {
+async function price_in_words(price) {
   let sglDigit = [
       'Zero',
       'One',
@@ -113,7 +113,7 @@ function price_in_words(price) {
   return str;
 }
 
-exports.price_in_rupees = function(total) {
+exports.price_in_rupees = async function(total) {
   let splittedNum = total.toString().split('.');
   let nonDecimal = splittedNum[0];
   let decimal = splittedNum[1];
@@ -123,9 +123,9 @@ exports.price_in_rupees = function(total) {
     }
   }
   let value =
-    price_in_words(Number(nonDecimal)) +
+    await price_in_words(Number(nonDecimal)) +
     'Rupees and' +
-    price_in_words(Number(decimal)) +
+    await price_in_words(Number(decimal)) +
     'Paise';
 
   let num = nonDecimal + '.' + decimal;
