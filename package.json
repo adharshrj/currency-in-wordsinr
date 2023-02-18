@@ -13,5 +13,8 @@
     "INR"
   ],
   "author": "Adharsh RJ",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
 }

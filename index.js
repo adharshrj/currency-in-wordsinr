@@ -110,22 +110,29 @@ async function price_in_words(price) {
       }
     str = words.reverse().join('');
   } else str = '';
+  console.log(str)
   return str;
 }
 
 exports.price_in_rupees = async function(total) {
   let splittedNum = total.toString().split('.');
   let nonDecimal = splittedNum[0];
-  let decimal = splittedNum[1];
+  let decimal = splittedNum[1] ? splittedNum[1] : 0;
   if (decimal[0] === '0') {
     if (Number(decimal[1]) > 0) {
       decimal = '1';
     }
   }
+  if (decimal.length > 2){
+      decimal = decimal.split('')
+      decimal[2] = `${Number(decimal[2]) + 1}` ? Number(decimal[2]) > 5 : Number(decimal[2])
+      decimal = decimal.join('')
+      decimal = decimal.substring(0,2)
+  }
   let value =
-    await price_in_words(Number(nonDecimal)) +
+    price_in_words(Number(nonDecimal)) +
     'Rupees and' +
-    await price_in_words(Number(decimal)) +
+    price_in_words(Number(decimal)) +
     'Paise';
 
   let num = nonDecimal + '.' + decimal;
