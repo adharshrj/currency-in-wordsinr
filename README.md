@@ -32,16 +32,16 @@ $ pnpm add currency-in-wordsinr@latest
 Once the package is installed, you can import the library using `import` or `require` approach:
 
 ```js
-import { price_in_rupees } from 'currency-in-wordsinr';
+import { currency_in_wordsinr } from 'currency-in-wordsinr';
 
-console.log(price_in_rupees('25000'));
+console.log(currency_in_wordsinr('25000'));
 ````
 
 If you use `require` for importing:
 
 ```js
-const { price_in_rupees } = require('currency-in-wordsinr');
+const { currency_in_wordsinr } = require('currency-in-wordsinr');
 
-console.log(price_in_rupees('25000'));
+console.log(currency_in_wordsinr('25000'));
 ```
 
