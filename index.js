@@ -89,7 +89,7 @@ exports.currency_in_wordsinr = function (value) {
 
   let splitNum = value.toString().split(".");
 
-  if (splitNum[1].length > 2) {
+  if (splitNum[1] && splitNum[1].length > 2) {
     let decimal = splitNum[1];
     decimal = decimal.split("");
     decimal[1] =
