@@ -1,6 +1,6 @@
 {
   "name": "currency-in-wordsinr",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Convert Input Amount to Words based on the Indian Rupee Format",
   "main": "index.js",
   "scripts": {
